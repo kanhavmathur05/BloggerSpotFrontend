@@ -1,0 +1,6 @@
+<h2>Heading</h2>
+<a  *ngIf="sessionStorage==null" routerLink="/login">Login</a>
+<div *ngIf="sessionStorage"><a>Logout</a></div>
+<a routerLink="/register">Register</a>
+<a routerLink="/blogs">BlogPosts</a>
+<router-outlet></router-outlet>

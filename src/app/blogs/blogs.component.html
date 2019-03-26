@@ -1,3 +1,13 @@
-<input [(ngModel)]="blogpost.blogTitle" placeholder="Blog Title"/>
-<input [(ngModel)]="blogpost.blogDescription" placeholder="Blog Description"/>
-<button type="submit" (click)="addBlogPost()">Add Blog</button>
+<div align="center">
+<table>
+    <tr>
+        <input [(ngModel)]="blogpost.blogTitle" placeholder="Blog Title"/>
+    </tr>
+    <tr>
+        <input [(ngModel)]="blogpost.blogDescription" placeholder="Blog Description"/>
+    </tr>
+    <tr>
+        <button type="submit" (click)="addBlogPost()">Add Blog</button>
+    </tr>
+</table>
+</div>

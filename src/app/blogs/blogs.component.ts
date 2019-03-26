@@ -20,9 +20,10 @@ export class BlogsComponent implements OnInit {
       (data)=>{
         this.blogpost=data;
         console.log(data),
+        sessionStorage.getItem("userdetail")
         window.location.reload();
-        this.router.navigate(['register'])},
-        (error)=>console.log(error.status)
+        //this.router.navigate(['register'])
+      },(error)=>console.log(error.status)
     );
     console.log("Blog Post Added");
   }

@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
       (data)=>{
         this.userdetail=data;
         console.log(data),
+        window.location.reload();
         this.router.navigate(['login'])},
         (error)=>console.log(error.status)
     );

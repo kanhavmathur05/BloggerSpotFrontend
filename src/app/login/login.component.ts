@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
         this.userdetail=data;
         console.log(data),
         sessionStorage.setItem("userdetail",JSON.stringify(this.userdetail));
-        window.location.reload();
-        this.router.navigate[('register')],
+     //   window.location.reload();
+        this.router.navigate(['blogs']),
         (error)=>console.log(error.status)
       }
     )

@@ -1,0 +1,16 @@
+<!--<button (click)="getAllBlogs()">Get Blogs</button>-->
+<div align="center">
+    <table border="1">
+      <tr *ngFor="let blog of blogs">
+        <td>{{blog.blogID}}</td>
+        <td>{{blog.approved}}</td>
+        <td>{{blog.blogTitle}}</td>
+        <td>{{blog.blogDescription}}</td>
+        <td>
+            <button  (click)="approveBlog(blog.blogID)" [routerLink]="getAllBlogs">Approve</button>
+            <button>Reject</button>
+            <button>DeleteBlogPost</button>
+        </td>
+      </tr>
+    </table>
+  </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UserDetails } from '../model/userdetails';
-import { RegisterService } from '../register.service';
+import { RegisterService } from '../services/register.service';
 import { Router, Routes } from '@angular/router';
 
 @Component({

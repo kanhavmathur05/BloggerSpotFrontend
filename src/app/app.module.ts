@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AllblogsComponent } from './allblogs/allblogs.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { BlogsComponent } from './blogs/blogs.component';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    BlogsComponent
+    BlogsComponent,
+    LogoutComponent,
+    AllblogsComponent
   ],
   imports: [
     BrowserModule,

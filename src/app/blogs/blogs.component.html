@@ -1,10 +1,13 @@
 <div align="center">
+
+    <a routerLink="getallblogs">Get All Blogs</a>
+
 <table>
     <tr>
-        <input [(ngModel)]="blogpost.blogTitle" placeholder="Blog Title"/>
+        <input [(ngModel)]="blogpost.blogTitle" placeholder="Blog Title" type="text" value="kdnsfkjsvd">
     </tr>
     <tr>
-        <input [(ngModel)]="blogpost.blogDescription" placeholder="Blog Description"/>
+        <input [(ngModel)]="blogpost.blogDescription" placeholder="Blog Description" type="text">
     </tr>
     <tr>
         <button type="submit" (click)="addBlogPost()">Add Blog</button>

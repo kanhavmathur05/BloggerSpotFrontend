@@ -2,10 +2,10 @@
     <table>
         <tr>
             <td>
-                <a  *ngIf="sessionStorage==null" routerLink="/login">Login</a>
+                <a  *ngIf="userdetail==null" routerLink="/login">Login</a>
             </td>
             <td>
-                    <div *ngIf="sessionStorage"><a>Logout</a></div>
+                    <a *ngIf="sessionStorage==null" routerLink="/logout"> Logout</a>
             </td>
             <td>
                     <a routerLink="/register">Register</a>

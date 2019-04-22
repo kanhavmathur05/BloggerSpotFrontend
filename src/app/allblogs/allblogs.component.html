@@ -1,5 +1,5 @@
 <!--<button (click)="getAllBlogs()">Get Blogs</button>-->
-<div align="center">
+<div align="center" *ngIf="admin; else elseBlock">
     <table border="1">
       <tr *ngFor="let blog of blogs">
         <td>{{blog.blogID}}</td>
@@ -8,9 +8,23 @@
         <td>{{blog.blogDescription}}</td>
         <td>
             <button  (click)="approveBlog(blog.blogID)" [routerLink]="getAllBlogs">Approve</button>
-            <button>Reject</button>
-            <button>DeleteBlogPost</button>
+            <button (click)="rejectBlog(blog.blogID)" >Reject</button>
+            <button (click)="deleteBlog(blog.blogID)">DeleteBlogPost</button>
         </td>
       </tr>
     </table>
   </div>
+
+
+  <ng-template #elseBlock>
+    <div>
+        <table border="1">
+            <tr *ngFor="let blog of blogs">
+              <td>{{blog.blogID}}</td>
+              <td>{{blog.approved}}</td>
+              <td>{{blog.blogTitle}}</td>
+              <td>{{blog.blogDescription}}</td>
+            </tr>
+          </table>
+    </div>
+  </ng-template>

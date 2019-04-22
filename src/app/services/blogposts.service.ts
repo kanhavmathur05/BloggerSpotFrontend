@@ -35,7 +35,6 @@ export class BlogpostsService {
   return this.http.post<BlogPost>('http://localhost:9002/collaborationProjectMiddleware/addBlogPost/',blogpost);
   }
 
-  approved:String='A';
   //Method to get all blog posts
   getAllBlogPosts():Observable<BlogPost[]>
   {
@@ -43,11 +42,23 @@ export class BlogpostsService {
   }
 
 
-  approveBlog(id:number):Observable<any>
+  approveBlog(id:number):Observable<BlogPost>
   {
     console.log("Service Blog ID::::::::::::"+id);
 //  console.log("http://localhost:9002/collaborationProjectMiddleware/approveBlogPost/"+{id});
     //console.log(`${id}`);
-    return this.http.get('http://localhost:9002/collaborationProjectMiddleware/approveBlogPost/'+id);
+    return this.http.get<BlogPost>('http://localhost:9002/collaborationProjectMiddleware/approveBlogPost/'+id);
+  }
+
+  rejectBlog(id:number):Observable<BlogPost>
+  {
+    console.log("Service Blog ID::::::::::"+id);
+    return this.http.get<BlogPost>('http://localhost:9002/collaborationProjectMiddleware/rejectBlogPost/'+id);
+  }
+
+  deleteBlog(id:number):Observable<BlogPost>
+  {
+    console.log("Service Blog ID:::::::::"+id);
+    return this.http.delete<BlogPost>('http://localhost:9002/collaborationProjectMiddleware/deleteBlogPost/'+id);
   }
 }

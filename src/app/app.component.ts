@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Collaboration-Project-FrontEnd';
+  showLogin:boolean;
+  showLogout:boolean;
+  constructor()
+  {
+    if(sessionStorage.userdetail==null)
+    {
+    this.showLogin=true;
+    this.showLogout=false;
+    }
+    else
+    {
+      this.showLogin=false;
+      this.showLogout=true;
+    }
+  }
+
 }

@@ -19,16 +19,16 @@ export class LoginComponent implements OnInit {
   {
     console.log(this.userdetail);
 
-    this.loginService.loginUser(this.userdetail).subscribe(
+this.loginService.loginUser(this.userdetail).subscribe(
       (data)=>{
         this.userdetail=data;
+        sessionStorage.setItem("userdetail",JSON.stringify(data))
         console.log(data),
-        sessionStorage.setItem("userdetail",JSON.stringify(this.userdetail));
      //   window.location.reload();
         this.router.navigate(['blogs']),
         (error)=>console.log(error.status)
       }
-    )
+    );
   }
 
 }

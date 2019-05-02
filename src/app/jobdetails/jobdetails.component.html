@@ -1,0 +1,42 @@
+<h2 align="center">Job Details</h2>
+<div>
+  <br>
+  <table align="center">
+    <tr *ngIf="admin">
+      Job ID:- {{jobdetails.id}}
+    </tr>
+    <tr>
+      Job Title:- {{jobdetails.jobTitle}}
+    </tr>
+    <tr>
+      Job Description:- {{jobdetails.jobDescription}}
+    </tr>
+    <tr>
+      Skills Required:- {{jobdetails.skillsRequired}}
+    </tr>
+    <tr>
+      Salary:- {{jobdetails.salary}} 
+    </tr>
+    <tr>
+      Experience Required:- {{jobdetails.experience}} 
+    </tr>
+    <tr>
+      Work Location:- {{jobdetails.location}} 
+    </tr>
+    <tr>
+      Vacancies:- {{jobdetails.vacancies}} 
+    </tr>
+    <tr>
+      Contact Info:- {{jobdetails.contact}} 
+    </tr>
+    <tr>
+      Posted On:- {{jobdetails.postedOn}} 
+    </tr>
+    <br>
+    <tr>
+      <button *ngIf="notApplied; else elseblock" class="btn btn-success" style="width:300px;" (click)="applyForJob(jobdetails.id)">Apply For Job</button>
+      <ng-template #elseblock><button style="width:300px;">Already Applied</button></ng-template>
+    </tr>
+  </table>
+
+</div>

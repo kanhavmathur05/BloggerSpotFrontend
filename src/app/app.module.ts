@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AllblogsComponent } from './allblogs/allblogs.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { JobdetailsComponent } from './jobdetails/jobdetails.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { AllblogsComponent } from './allblogs/allblogs.component';
     LoginComponent,
     BlogsComponent,
     LogoutComponent,
-    AllblogsComponent
+    AllblogsComponent,
+    JobsComponent,
+    JobdetailsComponent
   ],
   imports: [
     BrowserModule,

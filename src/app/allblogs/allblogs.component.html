@@ -1,30 +1,24 @@
-<!--<button (click)="getAllBlogs()">Get Blogs</button>-->
-<div align="center" *ngIf="admin; else elseBlock">
-    <table border="1">
+
+<br>
+<div align="center">
+    <table class="table table-responsive">
+      <thead>
+        <td *ngIf="admin" style="text-align:center; font-weight: bold; font-size: 20px;">BlogID</td>
+        <td *ngIf="admin" style="text-align:center;font-weight: bold; font-size: 20px;">Blog Approval</td>
+        <td style="text-align:center; font-weight: bold; font-size: 20px;">Blog Title</td>
+        <td style="text-align:center;font-weight: bold; font-size: 20px;">Blog Description</td>
+        <td *ngIf="admin" style="text-align:center;font-weight: bold; font-size: 20px;">Options</td>
+      </thead>
       <tr *ngFor="let blog of blogs">
-        <td>{{blog.blogID}}</td>
-        <td>{{blog.approved}}</td>
-        <td>{{blog.blogTitle}}</td>
-        <td>{{blog.blogDescription}}</td>
-        <td>
-            <button  (click)="approveBlog(blog.blogID)" [routerLink]="getAllBlogs">Approve</button>
-            <button (click)="rejectBlog(blog.blogID)" >Reject</button>
-            <button (click)="deleteBlog(blog.blogID)">DeleteBlogPost</button>
+        <td  *ngIf="admin" style="text-align:center">{{blog.blogID}}</td>
+        <td  *ngIf="admin" style="text-align:center">{{blog.approved}}</td>
+        <td style="text-align:center">{{blog.blogTitle}}</td>
+        <td style="text-align:center">{{blog.blogDescription}}</td>
+        <td  *ngIf="admin" style="text-align:center">
+            <button  (click)="approveBlog(blog.blogID)" [routerLink]="getAllBlogs" class="glyphicon glyphicon-ok btn btn-success"></button>
+            <button (click)="rejectBlog(blog.blogID)" class="glyphicon glyphicon-remove btn btn-default"></button>
+            <button (click)="deleteBlog(blog.blogID)" class="glyphicon glyphicon-trash btn btn-danger"></button>
         </td>
       </tr>
     </table>
   </div>
-
-
-  <ng-template #elseBlock>
-    <div>
-        <table border="1">
-            <tr *ngFor="let blog of blogs">
-              <td>{{blog.blogID}}</td>
-              <td>{{blog.approved}}</td>
-              <td>{{blog.blogTitle}}</td>
-              <td>{{blog.blogDescription}}</td>
-            </tr>
-          </table>
-    </div>
-  </ng-template>

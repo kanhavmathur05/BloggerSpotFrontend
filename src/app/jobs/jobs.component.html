@@ -1,0 +1,64 @@
+<br>
+<h2 *ngIf="admin" align="center" style="text-decoration:underline; font-family:Arial, Arial, Helvetica, sans-serif">Add New Job</h2>
+<br>
+<div align="center" *ngIf="admin">
+<table>
+    <tr>
+            <input  [(ngModel)]="job.companyName" placeholder="Company Name" type="text" style="width: 500px; margin-bottom: 10px">
+    </tr>
+    <tr>
+            <input [(ngModel)]="job.jobTitle" placeholder="Job Title" style="width: 500px; margin-bottom: 10px">
+    </tr>
+    <tr>
+            <input [(ngModel)]="job.jobDescription" placeholder="Job Description" style="width: 500px; margin-bottom: 10px">
+    </tr>
+    <tr>
+            <input [(ngModel)]="job.skillsRequired" placeholder="Skills Required" style="width: 500px; margin-bottom: 10px">
+    </tr>
+    <tr>
+            <input [(ngModel)]="job.experience" placeholder="Experience" style="width: 500px; margin-bottom: 10px">
+    </tr>
+    <tr>
+            <input [(ngModel)]="job.location" placeholder="Location" style="width: 500px; margin-bottom: 10px">
+    </tr>
+    <tr>
+            <input [(ngModel)]="job.salary" placeholder="Salary" style="width: 500px; margin-bottom: 10px">
+    </tr>
+    <tr>
+        <input [(ngModel)]="job.vacancies" placeholder="Vacancies" style="width: 500px; margin-bottom: 10px">
+    </tr>
+    <tr>
+            <button type="submit" (click)="addJob()" class="btn btn-success" style="width: 500px; margin-bottom: 10px">Add Job</button>
+    </tr>
+</table>
+</div>
+
+<br>
+  <h2 align="center" style="text-decoration:underline; font-family:Arial, Arial, Helvetica, sans-serif">Jobs</h2>
+<br>
+<div align="center">
+    <table class="table table-responsive">
+      <thead>
+        <td style="text-align:center; font-weight: bold; font-size: 16px;">Job Title</td>
+        <td style="text-align:center;font-weight: bold; font-size: 16px;">Jobs Description</td>
+        <td style="text-align:center; font-weight: bold; font-size: 16px;">Company Name</td>
+        <td style="text-align:center;font-weight: bold; font-size: 16px;">Skills Required</td>
+        <td style="text-align:center;font-weight: bold; font-size: 16px;">Location</td>
+        <td style="text-align:center;font-weight: bold; font-size: 16px;">Salary</td>
+        <td style="text-align:center;font-weight: bold; font-size: 16px;">Vacancies</td>
+        <td style="text-align:center;font-weight: bold; font-size: 16px;">View Details/Apply</td>
+      </thead>
+      <tr *ngFor="let job of jobs">
+        <td style="text-align:center">{{job.jobTitle}}</td>
+        <td style="text-align:center">{{job.jobDescription}}</td>
+        <td style="text-align:center">{{job.companyName}}</td>
+        <td style="text-align:center">{{job.skillsRequired}}</td>
+        <td style="text-align:center">{{job.location}}</td>
+        <td style="text-align:center">{{job.salary}}</td>
+        <td style="text-align:center">{{job.vacancies}}</td>
+        <td style="text-align:center"><!-- (click)="showDetails(job.id)-->
+          <a class="glyphicon glyphicon-eye-open btn btn-default" [routerLink]="['/jobdetails',job.id]"></a>
+          <button *ngIf="admin" class="glyphicon glyphicon-trash btn btn-danger" (click)="deleteJob(job.id)"></button>
+        </td>
+      </tr>
+    </table>

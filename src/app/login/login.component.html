@@ -1,13 +1,17 @@
+<br>
+<br>
+<h2 align="center" style="text-decoration:underline; font-family:Arial, Arial, Helvetica, sans-serif">Login</h2>
+<br>
 <div align="center">
   <table>
     <tr>
-        <input [(ngModel)]="userdetail.userName" placeholder="UserName"/>
+        <input [(ngModel)]="userdetail.userName" placeholder="UserName" style="width: 500px; margin-bottom: 10px"/>
     </tr>
     <tr>
-        <input [(ngModel)]="userdetail.password" placeholder="Password"/>
+        <input [(ngModel)]="userdetail.password" placeholder="Password" style="width: 500px; margin-bottom: 10px"/>
     </tr>
     <tr>
-        <button type="submit" (click)="login()">Login</button>
+        <button class="btn btn-success" type="submit" (click)="login()" style="width: 500px">Login</button>
     </tr>
   </table>
   

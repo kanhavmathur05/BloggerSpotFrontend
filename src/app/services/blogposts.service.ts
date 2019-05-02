@@ -36,12 +36,13 @@ export class BlogpostsService {
   }
 
   //Method to get all blog posts
-  getAllBlogPosts():Observable<BlogPost[]>
+  getAllBlogPosts(approved:String):Observable<BlogPost[]>
   {
-    return this.http.get<BlogPost[]>('http://localhost:9002/collaborationProjectMiddleware/getAllBlogPost/a');
+    console.log(JSON.parse(sessionStorage.getItem("userdetail")).role);
+    return this.http.get<BlogPost[]>('http://localhost:9002/collaborationProjectMiddleware/getAllBlogPost/'+approved);
   }
 
-
+  //Method to approve Blog Post
   approveBlog(id:number):Observable<BlogPost>
   {
     console.log("Service Blog ID::::::::::::"+id);

@@ -1,16 +1,16 @@
+<br>
+<br>
 <div align="center">
-
-    <a routerLink="getallblogs">Get All Blogs</a>
-
 <table>
     <tr>
-        <input [(ngModel)]="blogpost.blogTitle" placeholder="Blog Title" type="text" value="kdnsfkjsvd">
+        <input [(ngModel)]="blogpost.blogTitle" placeholder="Blog Title" type="text" value="kdnsfkjsvd" style="width: 400px; margin-bottom: 5px;">
     </tr>
     <tr>
-        <input [(ngModel)]="blogpost.blogDescription" placeholder="Blog Description" type="text">
+        <input [(ngModel)]="blogpost.blogDescription" placeholder="Blog Description" type="text" style="width: 400px; margin-bottom: 5px;">
     </tr>
     <tr>
-        <button type="submit" (click)="addBlogPost()">Add Blog</button>
+        <button type="submit" (click)="addBlogPost()" class="btn btn-success" style="width: 400px; margin-bottom: 10px;">Add Blog</button>
     </tr>
 </table>
+<a routerLink="getallblogs" class="btn btn-info" style="width:400px;">Get All Blogs</a>
 </div>

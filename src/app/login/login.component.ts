@@ -24,11 +24,10 @@ this.loginService.loginUser(this.userdetail).subscribe(
         this.userdetail=data;
         sessionStorage.setItem("userdetail",JSON.stringify(data))
         console.log(data),
-     //   window.location.reload();
-        this.router.navigate(['blogs']),
+//    this.router.navigate(['blogs']);
+    window.location.href="http://localhost:4200/blogs",
         (error)=>console.log(error.status)
       }
     );
   }
-
 }

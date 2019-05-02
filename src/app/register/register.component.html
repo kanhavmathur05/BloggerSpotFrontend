@@ -1,28 +1,31 @@
+<br>
+<h2 align="center" style="text-decoration:underline; font-family:Arial, Arial, Helvetica, sans-serif">Register</h2>
+<br>
 <div align="center">
 <table>
     <tr>
-            <input  [(ngModel)]="userdetail.userName" placeholder="UserName" type="text">
+            <input  [(ngModel)]="userdetail.userName" placeholder="UserName" type="text" style="width: 500px; margin-bottom: 10px">
     </tr>
     <tr>
-            <input [(ngModel)]="userdetail.firstName" placeholder="FirstName">
+            <input [(ngModel)]="userdetail.firstName" placeholder="FirstName" style="width: 500px; margin-bottom: 10px">
     </tr>
     <tr>
-            <input [(ngModel)]="userdetail.lastName" placeholder="LastName">
+            <input [(ngModel)]="userdetail.lastName" placeholder="LastName" style="width: 500px; margin-bottom: 10px">
     </tr>
     <tr>
-            <input [(ngModel)]="userdetail.email" placeholder="Email">
+            <input [(ngModel)]="userdetail.email" placeholder="Email" style="width: 500px; margin-bottom: 10px">
     </tr>
     <tr>
-            <input [(ngModel)]="userdetail.mobile" placeholder="Mobile">
+            <input [(ngModel)]="userdetail.mobile" placeholder="Mobile" style="width: 500px; margin-bottom: 10px">
     </tr>
     <tr>
-            <input [(ngModel)]="userdetail.address" placeholder="Address">
+            <input [(ngModel)]="userdetail.address" placeholder="Address" style="width: 500px; margin-bottom: 10px">
     </tr>
     <tr>
-            <input [(ngModel)]="userdetail.password" placeholder="Password">
+            <input [(ngModel)]="userdetail.password" placeholder="Password" style="width: 500px; margin-bottom: 10px">
     </tr>
     <tr>
-            <button type="submit" (click)="registerUser()">Register</button>
+            <button type="submit" (click)="registerUser()" class="btn btn-success" style="width: 500px; margin-bottom: 10px">Register</button>
     </tr>
 </table>
 </div>

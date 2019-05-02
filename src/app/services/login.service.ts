@@ -16,4 +16,9 @@ export class LoginService {
     console.log(userdetails.password);
     return this.http.post<UserDetails>('http://localhost:9002/collaborationProjectMiddleware/login/',userdetails);
   }
+
+  logoutUser()
+  {
+    
+  }
 }
